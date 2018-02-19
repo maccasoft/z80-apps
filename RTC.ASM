@@ -17,6 +17,9 @@
 ;[2017/11/29] WBW modified to adjust to RTC in use dynamically
 ;             using HBIOS platform detection
 ;
+;[2018/02/16] M. Maccaferri modified to fall-back to RC2014 if
+;             unknown BIOS
+;
 ; Constants
 ;
 
@@ -1027,11 +1030,13 @@ RTC_INIT:
 	DEC	A		; Test for UBIOS
 	JR	Z,UINIT		; Do UBIOS setup
 ;
-	; Neither UNA nor RomWBW
-	LD	DE,BIOERR	; BIOS error message
+	; Neither UNA nor RomWBW, defaults to RC2014
+	LD	DE,RCTAG	; BIOS notification string
 	LD	C,9		; BDOS string display function
 	CALL	BDOS		; Do it
-	JP	0		; Bail out!
+	LD	C,PORT_RC
+	LD	DE,PLT_RC
+	JR	RTC_INIT2
 ;
 HINIT:
 ;
@@ -1674,7 +1679,8 @@ BIOERR	.TEXT	"Unknown BIOS, aborting...\r\n$"
 PLTERR	.TEXT	"Unknown hardware platform, aborting...\r\n$"
 UBERR	.TEXT	"UNA UBIOS is not currently supported, aborting...\r\n$"
 HBTAG	.TEXT	"RomWBW HBIOS$"
-UBTAG	.TEXT	"UNA UBIOS"
+UBTAG	.TEXT	"UNA UBIOS$"
+RCTAG	.TEXT	"RC2014$"
 PLT_SBC	.TEXT	", RTC Latch Port 0x70\r\n$"
 PLT_N8	.TEXT	", RTC Latch Port 0x88\r\n$"
 PLT_MK4	.TEXT	", RTC Latch Port 0x8A\r\n$"
