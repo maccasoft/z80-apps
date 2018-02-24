@@ -13,6 +13,8 @@ Various applications and utilities for the Z80 microprocessor designed to run on
    Simple date and time display program for DS1302 RTC board.  
  * **RTC.ASM**  
    DS1302 Realtime Clock Board setup utility.  
+ * **TERM.ASM**  
+   A very dumb terminal program to communicate with devices connected to the secondary serial port of the RC2014 dual SIO board.  
 
  * **filepack.py**  
    Python version of the file packager designed to upload programs to the RC2014 computer using DOWNLOAD.COM  
