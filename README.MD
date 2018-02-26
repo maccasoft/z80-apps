@@ -12,7 +12,9 @@ Various applications and utilities for the Z80 microprocessor designed to run on
  * **DATE.ASM**  
    Simple date and time display program for DS1302 RTC board.  
  * **RTC.ASM**  
-   DS1302 Realtime Clock Board setup utility.  
+   DS1302 Realtime Clock board setup utility.  
+ * **RTCNTP.ASM**  
+   Simple NTP client for the DS1302 RTC board.  
  * **TERM.ASM**  
    A very dumb terminal program to communicate with devices connected to the secondary serial port of the RC2014 dual SIO board.  
 
