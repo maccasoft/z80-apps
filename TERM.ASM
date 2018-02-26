@@ -1,4 +1,4 @@
-; Very Dumb Terminal for RC2014
+; Very Dumb Terminal for RC2014 with CP/M
 ; Copyright (c) 2018 by Marco Maccaferri
 ;
 ; Compile on CP/M with:
@@ -74,7 +74,7 @@ L2:         MVI   C,06H     ; get character from console
             CALL  0005H
 
             ORA   A         ; nothing ready, loop
-            JZ    L2
+            JZ    L1
             CPI   03H       ; CTRL-C exit
             JZ    EXIT
 
