@@ -6,6 +6,8 @@ Various applications and utilities for the Z80 microprocessor designed to run on
    Terminal version of the famous 2048 game.  
  * **AYEXAMPL.ASM**  
    Example player for the YM2149F / AY-3-8910 Sound card.  
+ * **BLINK.ASM**  
+   I/O board LED blinking example.  
  * **CPMLOADER.ASM**  
    Customized code to directly load CP/M without the need to press any key.  
    .HEX file is ready to be burned on a EPROM.  
