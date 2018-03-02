@@ -2,10 +2,10 @@
 
 Various applications and utilities for the Z80 microprocessor designed to run on the [RC2014-Z80](http://http://rc2014.co.uk/) computer.
 
+ * **2048.ASM**  
+   Terminal version of the famous 2048 game.  
  * **AYEXAMPL.ASM**  
    Example player for the YM2149F / AY-3-8910 Sound card.  
- * **cpm2048.c**  
-   Terminal version of the famous 2048 game.  
  * **CPMLOADER.ASM**  
    Customized code to directly load CP/M without the need to press any key.  
    .HEX file is ready to be burned on a EPROM.  
