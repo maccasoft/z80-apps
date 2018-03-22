@@ -13,6 +13,8 @@ Various applications and utilities for the Z80 microprocessor designed to run on
    .HEX file is ready to be burned on a EPROM.  
  * **DATE.ASM**  
    Simple date and time display program for DS1302 RTC board.  
+ * **PATTERN.ASM**  
+   TV test pattern display for the Graphics Video Card.  
  * **RTC.ASM**  
    DS1302 Realtime Clock board setup utility.  
  * **RTCNTP.ASM**  
@@ -28,6 +30,7 @@ Various applications and utilities for the Z80 microprocessor designed to run on
  * [RC2014](http://http://rc2014.co.uk/)
  * [YM2149F / AY-3-8910 Sound card](https://github.com/electrified/rc2014-ym2149)
  * [DS1302 Real Time Clock](https://github.com/electrified/rc2014-ds1302-rtc)
+ * [Graphics Video Card](https://github.com/maccasoft/propeller-graphics-card)
 
 ### License
 
