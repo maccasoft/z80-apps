@@ -19,6 +19,8 @@ Various applications and utilities for the Z80 microprocessor designed to run on
    DS1302 Realtime Clock board setup utility.  
  * **RTCNTP.ASM**  
    Simple NTP client for the DS1302 RTC board.  
+ * **SPRITE.ASM**  
+   Sprite animation demo for the Graphics Video Card.  
  * **TERM.ASM**  
    A very dumb terminal program to communicate with devices connected to the secondary serial port of the RC2014 dual SIO board.  
 
