@@ -22,6 +22,10 @@ WRMAP       .EQU    0DH
 WRBMP       .EQU    0EH
 WRMEM       .EQU    0FH
 
+MODE1       .EQU    00H
+MODE2       .EQU    01H
+MODE3       .EQU    02H
+
 PETER1      .EQU    07H
 PETER2      .EQU    0BH
 PETER3      .EQU    0FH
@@ -34,8 +38,10 @@ TILES_COUNT .EQU    27
 
             ; Set video mode
 
-            LD      A,00H
+            LD      A,SETMODE
             OUT     (PORTC),A
+            LD      A,MODE1
+            OUT     (PORTD),A
 
             ; Clear all
 
