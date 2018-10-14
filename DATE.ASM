@@ -1,5 +1,3 @@
-	.Title	"RTC"
-;
 ; Program:    date.asm
 ; Author:     Marco Maccaferri
 ; Date:       16 Feb 2018
@@ -133,10 +131,8 @@ RTC_GET_TIME:
             AND     $1F
             CP      $10
             JR      C,L2
-            LD      HL,MONTHS+30
             AND     $0F
             ADD     A,$0A
-
 L2:         LD      C,A
             LD      B,0
             DEC     BC
