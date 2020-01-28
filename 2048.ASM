@@ -945,7 +945,8 @@ DIV16:
             LD      HL,0
             LD      B,16
 
-DL1         SLL  C              ; Undoc. 0CBH, 31H
+DL1         SCF
+            RL      C
             RLA
             ADC     HL,HL
             SBC     HL,DE
