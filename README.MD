@@ -23,6 +23,8 @@ Various applications and utilities for the Z80 microprocessor designed to run on
    Sprite animation demo for the Graphics Video Card.  
  * **TERM.ASM**  
    A very dumb terminal program to communicate with devices connected to the secondary serial port of the RC2014 dual SIO board.  
+ * **AUTH**  
+   Two-Factor Authentication Password Generator.  
 
  * **filepack.py**  
    Python version of the file packager designed to upload programs to the RC2014 computer using DOWNLOAD.COM  
