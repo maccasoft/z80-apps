@@ -8,7 +8,11 @@ import sys
 import glob
 import ntpath
 import getopt
-import serial
+
+try:
+    import serial
+except ImportError:
+    pass
 
 from time import sleep
 
@@ -44,8 +48,8 @@ def encodeFile(filename, device):
 
         # data stream
         byte = f.read(1)
-        while byte != "":
-            device.write(byte.encode('hex').upper())
+        while len(byte) == 1:
+            device.write("%02X" % ord(byte))
             device.flush()
             length = length + 1
             checksum = checksum + ord(byte)
@@ -53,8 +57,8 @@ def encodeFile(filename, device):
             sleep(byte_delay);
 
         # fill last sector, if required
-        if fill_ch <> -1:
-            while (length % 128) <> 0:
+        if fill_ch != -1:
+            while (length % 128) != 0:
                 device.write("%02X" % (fill_ch))
                 device.flush()
                 length = length + 1
@@ -109,7 +113,7 @@ for o, a in opts:
     if o == "-u":
         user = int(a)
 
-if port <> None:
+if port != None:
     device = serial.Serial()
     device.port = port
     device.baudrate = baudrate
@@ -122,6 +126,6 @@ for x in args:
     for fn in glob.glob(x):
         encodeFile(fn, device)
 
-if port <> None:
+if port != None:
     device.close()
 
